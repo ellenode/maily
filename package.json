@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && node test/maily.mjs",
     "build": "rollup -c",
     "prepare": "npm run build"
   },
@@ -29,12 +29,12 @@
   "homepage": "https://github.com/CrisGuzmanS/maily#readme",
   "dependencies": {
     "arrowy-env": "^2.0.1",
-    "handlebars": "^4.7.8",
-    "nodemailer": "^6.9.0"
+    "handlebars": "^4.7.9",
+    "nodemailer": "^8.0.7"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "rollup": "^4.44.1"
+    "rollup": "^4.60.3"
   }
 }

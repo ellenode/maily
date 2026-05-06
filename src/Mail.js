@@ -92,6 +92,29 @@ export class Mail {
 
     send() {
 
+        this.theSender = this.theSender || env('MAIL_FROM')
+        this.theRecipient = this.theRecipient || env('MAIL_TO')
+
+        if (!this.theSender) {
+            throw new Error('No se ha configurado el correo emisor "MAIL_FROM" en el archivo .env o en el método "from()"')
+        }
+
+        if (!env('MAIL_PASSWORD')) {
+            throw new Error('No se ha configurado la clave del correo emisor "MAIL_PASSWORD" en el archivo .env')
+        }
+
+        if (!env('MAIL_HOST')) {
+            throw new Error('No se ha configurado el host del correo emisor "MAIL_HOST" en el archivo .env')
+        }
+
+        if (!env('MAIL_PORT')) {
+            throw new Error('No se ha configurado el puerto del correo emisor "MAIL_PORT" en el archivo .env')
+        }
+
+        if (!this.theRecipient) {
+            throw new Error('No se ha configurado el correo receptor "MAIL_TO" en el archivo .env o en el método to()')
+        }
+
         if (this.theHtml) {
             let htmlFile = fs.readFileSync(this.theHtml, 'utf-8');
             htmlFile = handlebars.compile(htmlFile)(this.theData);
