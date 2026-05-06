@@ -1,6 +1,6 @@
 {
   "name": "@ellenode/maily",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Maily es un paquete minimalista para el envío de correos electrónicos en Node.js utilizando nodemailer, con soporte para plantillas HTML basadas en Handlebars y una sintaxis fluida y sencilla.",
   "type": "module",
   "main": "index.js",
