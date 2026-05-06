@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/CrisGuzmanS/maily#readme",
   "dependencies": {
-    "arrowy-env": "^2.0.1",
+    "@ellenode/envy": "^0.0.1",
     "handlebars": "^4.7.9",
     "nodemailer": "^8.0.7"
   },

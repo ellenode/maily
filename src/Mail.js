@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer'
-import { env } from 'arrowy-env';
+import { env } from '@ellenode/envy';
 import fs from 'fs';
 import handlebars from 'handlebars';
 
@@ -122,7 +122,7 @@ export class Mail {
         }
 
         const mailOptions = {
-            from: env('MAIL_FROM'),
+            from: this.theSender,
             to: this.theRecipient,
             cc: this.theCc,
             bcc: this.theBcc,

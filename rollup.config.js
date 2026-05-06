@@ -9,5 +9,5 @@ export default {
     { file: 'dist/maily.esm.js', format: 'esm' }
   ],
   plugins: [nodeResolve(), commonjs()],
-  external: ['nodemailer', 'handlebars', 'arrowy-env'],
+  external: ['nodemailer', 'handlebars', '@ellenode/envy'],
 };

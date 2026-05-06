@@ -25,7 +25,7 @@ Maily depende de los siguientes valores de entorno, que debes definir en tu arch
 
 ```js
 import { Mail } from '@ellenode/maily';
-import { env } from 'arrowy-env';
+import { env } from '@ellenode/envy';
 
 Mail.from(env('MAIL_FROM'))
   .to('destinatario@ejemplo.com')
@@ -93,7 +93,7 @@ Mail.from(env('MAIL_FROM'))
 
 ## 📦 Dependencias
 nodemailer
-arrowy-env
+@ellenode/envy
 handlebars
 fs
 
