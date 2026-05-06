@@ -1,17 +1,17 @@
-# Meily 📧
+# Maily 📧
 
-**Meily** es un paquete minimalista para el envío de correos electrónicos en Node.js utilizando `nodemailer`, con soporte para plantillas HTML basadas en Handlebars y una sintaxis fluida y sencilla.
+**Maily** es un paquete minimalista para el envío de correos electrónicos en Node.js utilizando `nodemailer`, con soporte para plantillas HTML basadas en Handlebars y una sintaxis fluida y sencilla.
 
 ---
 
 ## 🚀 Instalación
 
 ```bash
-npm install meily
+npm install maily
 ```
 
 ## ⚙️ Configuración
-Meily depende de los siguientes valores de entorno, que debes definir en tu archivo .env:
+Maily depende de los siguientes valores de entorno, que debes definir en tu archivo .env:
 
 | Variable        | Descripción                            |
 | --------------- | -------------------------------------- |
@@ -24,7 +24,7 @@ Meily depende de los siguientes valores de entorno, que debes definir en tu arch
 ## ✉️ Ejemplo Básico de Uso
 
 ```js
-import { Mail } from 'meily';
+import { Mail } from '@ellenode/maily';
 import { env } from 'arrowy-env';
 
 Mail.from(env('MAIL_FROM'))
@@ -38,7 +38,7 @@ Mail.from(env('MAIL_FROM'))
 Puedes enviar correos utilizando archivos `.html`:
 
 ```js
-import { Mail } from 'meily';
+import { Mail } from '@ellenode/maily';
 
 await Mail.from(env('MAIL_FROM'))
     .to('destinatario@ejemplo.com')
