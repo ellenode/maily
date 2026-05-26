@@ -11,7 +11,11 @@ const transporter = nodemailer.createTransport({
         user: env('MAIL_FROM'),
         pass: env('MAIL_PASSWORD')
     },
-    tls: { rejectUnauthorized: false }
+    tls: { rejectUnauthorized: false },
+
+    connectionTimeout: Number(env('MAIL_CONNECTION_TIMEOUT') || 5000),
+    greetingTimeout: Number(env('MAIL_GREETING_TIMEOUT') || 5000),
+    socketTimeout: Number(env('MAIL_SOCKET_TIMEOUT') || 5000)
 });
 transporter.verify(function (error, success) {
     if (error) {
